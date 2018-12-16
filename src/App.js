@@ -5,12 +5,18 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ReactPortfolio from './Components/ReactPortfolio'
 import NativePortfolio from './Components/NativePortfolio'
 import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import Icon from '@material-ui/core/Icon';
+import { withStyles } from '@material-ui/core/styles';
+
+
 
 class App extends Component {
 
   state = {
-    backgroundToggle: false
+    backgroundToggle: false,
   }
+
 
   handleBackgroundOn = () => {
     this.setState({backgroundToggle: false})
@@ -24,23 +30,18 @@ class App extends Component {
     const {backgroundToggle} = this.state;
 
     if(backgroundToggle == true) {
-      return <Button 
-        variant="contained" 
-        color="primary" 
-        style={{width: 120, margin: 20}}
+      return <IconButton color="primary" style={{backgroundColor: 'white'}}
         className="bg-dark"
         onClick={this.handleBackgroundOn}
-      >Switch Off
-    </Button>
+      >
+    </IconButton>
     } else {
-      return <Button 
-      variant="contained" 
-      color="dark" 
-      style={{width: 120, margin: 20}}
+      return <IconButton color="primary" style={{backgroundColor: 'white',}}
+      className="bg-dark"
       className="bg-light"
       onClick={this.handleBackgroundOff}
-    >Switch On
-  </Button>
+    >
+  </IconButton>
     }
   }
   
@@ -52,7 +53,10 @@ class App extends Component {
 
           <body className={backgroundToggle == true ? "App-headerLight" : "App-headerDark"}>
 
-                
+
+
+
+
                 {this.renderBackgroundSwitch()}
 
           
@@ -61,6 +65,9 @@ class App extends Component {
                 <ReactPortfolio />
 
                 <NativePortfolio />
+
+                <NativePortfolio />
+
     
                   
             </body>
