@@ -1,20 +1,17 @@
-import React, {Component, StyleSheet} from 'react';
-import logo from './logo.svg';
+
+import React, {Component} from 'react';
 import './CSS/App.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ReactPortfolio from './Components/ReactPortfolio'
 import NativePortfolio from './Components/NativePortfolio'
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import Icon from '@material-ui/core/Icon';
-import { withStyles } from '@material-ui/core/styles';
-
+import AppSource from './Components/AppSource'
 
 
 class App extends Component {
 
   state = {
     backgroundToggle: false,
+    sourceCode: true
   }
 
 
@@ -49,30 +46,15 @@ class App extends Component {
     const {backgroundToggle} = this.state;
     return (
         <html>
-
-
-          <body className={backgroundToggle == true ? "App-headerLight" : "App-headerDark"}>
-
-
-
-
-
+          <body style={{paddingTop: '10%'}}className={backgroundToggle == true ? "App-headerLight" : "App-headerDark"}>
                 {this.renderBackgroundSwitch()}
-
-          
                 <h1 className={backgroundToggle == true ? "h1CodeDark" : "h1CodeLight"} style={{margin: 70}}>Mobile & Web Development.</h1>
-                
+                <NativePortfolio />
                 <ReactPortfolio />
 
-                <NativePortfolio />
-
-                <NativePortfolio />
-
-    
-                  
+                <AppSource />
+                
             </body>
-
-
       </html>
     );
   }
