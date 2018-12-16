@@ -81,7 +81,9 @@
     .h1CodeDark { font-family: Consolas, monaco, monospace; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 400; 
       line-height: 20px; color: #222f3e } 
       
-    
+      .pCodeSource { font-family: Consolas, monaco, monospace; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 400; 
+        line-height: 20px; color: white;
+      } 
 
 
 
