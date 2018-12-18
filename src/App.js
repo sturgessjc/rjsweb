@@ -5,6 +5,7 @@ import ReactPortfolio from './Components/ReactPortfolio'
 import NativePortfolio from './Components/NativePortfolio'
 import IconButton from '@material-ui/core/IconButton';
 import AppSource from './Components/AppSource'
+import SourceTabs from './Components/SourceTabs'
 
 
 class App extends Component {

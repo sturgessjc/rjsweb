@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../CSS/App.css';
+import SourceTabs from './SourceTabs'
 
 const curlO = '{'
 const curlC = '}'
@@ -9,7 +10,14 @@ class AppSource extends Component {
     render() {
 
     return (
+
+      
      <div style={{margin: '10%', paddingLeft: '2%', paddingTop: '2%', paddingBottom: '2%', backgroundColor: '#2C3A47'}} className="">
+         <div style={{marginBottom: '10%', paddingLeft: '2%',}}>
+            <SourceTabs />
+
+         </div>
+
         <p className="pCodeSource">import React, {curlO}Component, StyleSheet} from 'react';</p>
         <p className="pCodeSource">import logo from './logo.svg';</p>
         <p className="pCodeSource">import './CSS/App.css';</p>
